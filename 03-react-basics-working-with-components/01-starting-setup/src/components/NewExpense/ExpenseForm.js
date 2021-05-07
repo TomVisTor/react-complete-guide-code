@@ -18,10 +18,10 @@ const ExpenseForm = (props) => {
     //   return { ...prevState, enteredTitle: event.target.value };
     // });
   };
-  const AmountChangeHandler = (event) => {
+  const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
   };
-  const DateChangeHandler = (event) => {
+  const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
   };
 
@@ -58,7 +58,7 @@ const ExpenseForm = (props) => {
             min="0.01"
             step="0.01"
             value={enteredAmount}
-            onChange={AmountChangeHandler}
+            onChange={amountChangeHandler}
           />
         </div>
         <div className="new-expense__control">
@@ -68,11 +68,12 @@ const ExpenseForm = (props) => {
             min="2019-01-01"
             max="2025-12-31"
             value={enteredDate}
-            onChange={DateChangeHandler}
+            onChange={dateChangeHandler}
           />
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={props.onCancel}>Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
