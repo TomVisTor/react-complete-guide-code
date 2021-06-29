@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [] = useState()
+  const [showParagraph, setShowParagraph] = useState(false)
 
   return (
     <div className="app">
       <h1>Hi there!</h1>
-      <p>This is New!</p>
+      {showParagraph && <p>This is New!</p>}
     </div>
   );
 }
