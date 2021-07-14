@@ -36,7 +36,7 @@ const AvailableMeals = () => {
 
   useEffect(() => {
     const fetchMeals = async () => {
-      const response = await fetch('https://food-order-601c9-default-rtdb.europe-west1.firebasedatabase.app/meals.json');
+      const response = await fetch('https://react-project-4a843-default-rtdb.europe-west1.firebasedatabase.app/meals.json');
       const responseData = await response.json();
 
       const loadedMeals = [];
