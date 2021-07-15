@@ -38,7 +38,7 @@ const AvailableMeals = () => {
 
   useEffect(() => {
     const fetchMeals = async () => {
-      const response = await fetch(process.env.REACT_APP_FIREBASE_URL);
+      const response = await fetch(process.env.REACT_APP_FIREBASE_GET_URL);
 
       if (!response.ok) {
         throw new Error("Something went wrong");
