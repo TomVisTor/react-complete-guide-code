@@ -5,12 +5,14 @@ import Cart from "./components/Cart/Cart";
 import Layout from "./components/Layout/Layout";
 import Products from "./components/Shop/Products";
 
+console.log(process.env.REACT_APP_FIRE_BASE_REDUX_PROJECT)
+
 function App() {
   const showCart = useSelector((state) => state.ui.cartIsVisible);
   const cart = useSelector((state) => state.cart);
 
   useEffect(() => {
-    fetch(process.env.REACT_APP_FIRE_BASE_REDUX_PROJECT_GET, {
+    fetch(process.env.REACT_APP_FIRE_BASE_REDUX_PROJECT, {
       method: 'PUT',
       body: JSON.stringify(cart),
     });
